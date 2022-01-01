@@ -1,0 +1,46 @@
+1	X = Helena Y = Alice	18 5 17 16 11
+2	X = Alice Y = Alfred	18 8 17 11 12
+2	X = Alice Y = Edward	18 8 17 11 14
+2	X = Alice Y = Helena	18 8 17 11 16
+3	X = Edward Y = Alice	19 1 17 14 11
+3	X = Edward Y = Alfred	19 1 17 14 12
+3	X = Edward Y = Helena	19 1 17 14 16
+3	X = Alfred Y = Alice	19 4 17 12 11
+3	X = Alfred Y = Edward	19 4 17 12 14
+3	X = Alfred Y = Helena	19 4 17 12 16
+4	X = Victoria Y = Helena	22 20 16
+4	X = Albert Y = Helena	23 21 16
+5	X = Victoria Y = Alice	22 20 11
+5	X = Victoria Y = Alfred	22 20 12
+5	X = Victoria Y = Edward	22 20 14
+5	X = Victoria Y = Helena	22 20 16
+6	X = Marie Y = Alexandra	6 22 20 15
+6	X = Louise Y = Albert	7 22 20 13
+6	X = Victoria Y = Alice	9 22 20 11
+6	X = Victoria Y = Alfred	9 22 20 12
+6	X = Victoria Y = Edward 9 22 20 14
+6	X = Victoria Y = Helena	9 22 20 16
+7	X = Alfred Y = Victoria	22 20 12 4
+7	X = Albert Y = Louise	22 20 13 3
+7	X = Edward Y = Victoria	22 20 14 1
+7	X = Alfred Y = Albert	23 21 12 4
+7	X = Albert Y = Ernest	23 21 13 3
+7	X = Edward Y = Albert	23 21 14 1
+8	X = Edward Y = Alice	1 24 17 14 11 8
+8	X = Edward Y = Helena	1 24 17 14 16 5
+8	X = Edward Y = Victoria	1 26 22 20 14 9
+8	X = Albert Y = Alice	3 25 23 21 11 8
+8	X = Albert Y = Helena	3 25 23 21 16 5
+8	X = Albert Y = Louise	3 26 22 20 13 7
+8	X = Alfred Y = Alice	4 24 17 12 11 8
+8	X = Alfred Y = Helena	4 24 17 12 16 5
+8	X = Alfred Y = Alexandra	4 25 23 21 15 10
+8	X = Alfred Y = Victoria	4 26 22 20 12 9
+9	X = Edward Y = Alfred	24 17 12 14 1 4
+9	X = Alfred Y = Edward	24 17 14 12 4 1
+9	X = Alfred Y = Albert	25 23 21 12 4 3
+9	X = Albert Y = Ernest	25 23 21 13 3 2
+9	X = Edward Y = Albert	25 23 21 14 1 3
+9	X = Albert Y = Alfred	26 23 21 12 3 4
+9	X = Ernest Y = Albert	26 23 21 13 2 3
+9	X = Albert Y = Edward	26 23 21 14 3 1

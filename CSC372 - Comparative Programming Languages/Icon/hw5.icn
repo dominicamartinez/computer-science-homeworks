@@ -1,0 +1,20 @@
+#Dominic Martinez
+# 10/10/03
+# takes a list of words and sees if they are palindromes
+procedure palindrome(word)
+	size := *word;
+	y := left(word, size/2);
+	x := reverse(right(word, size/2));
+	write("Result for '", word, "'")
+	write("    front        : '", y, "'");
+	write("    reversed back: '", x, "'");
+	if ( x == y) then return "yes" else return "no";
+end	
+	
+procedure main()
+    infile := open("hw5.dat")
+    words := []
+    every push(words, !infile)
+    words := sort(words)
+    every word := !words do write(palindrome(word), "\n")
+end

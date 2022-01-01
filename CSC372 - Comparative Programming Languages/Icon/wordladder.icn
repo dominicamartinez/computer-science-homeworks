@@ -1,0 +1,57 @@
+link split
+
+procedure main()
+	writes("Enter the first word or ! to quit: ")
+	start := read()
+	writes("Enter the second word: ")
+	ending := read()
+	writes("Maximum number of steps: ")
+	max := read()
+	steps := 0
+        infile := open("wordrelationships.dat")
+	Explored := table()
+	Answer := []
+        Explore := []
+	words := []
+        every push(words, !infile)
+	every line := !words do {
+		vertices := split(line, ":")
+		every w := !vertices do writes(w)
+		if (vertices[1] == start) then {
+			put(Explore, !vertices)
+			lose := pop(Explore)
+			Explored[lose] := 1
+			push(Answer, lose)
+			every w := !Explore do Explored[w] := 0
+		} else {}
+	}
+	len := *Explore
+	while (len > 0) do {
+		visit := pop(Explore)
+		if (visit == ending) then {
+			push(Answer, visit)
+			Explored[visit] := 1
+			break
+		}
+		if (Explored[visit] == 0) then {
+			push(Answer, visit)
+			Explored[visit] := 1
+			steps := steps + 1
+			every lin := !words do {
+				ver := split(line, " ")
+				if (ver[1] == visit) then {
+					temp := []
+					push(temp, !ver)
+					push(Explore, !temp)
+					lose := pop(Explore)
+				}
+			}
+		}
+		len := *Explore
+	}
+
+	if (steps <= max) then {
+		every a := !Answer do writes(a, " ")
+	}
+	else write("NO SOLUTION FOUND")
+end

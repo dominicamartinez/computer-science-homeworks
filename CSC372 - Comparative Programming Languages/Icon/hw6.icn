@@ -1,0 +1,36 @@
+# Dominic Martinez
+
+procedure anagram(word)
+# turn the dictionary into a list
+	L5 := []
+	infile := open("/home/cs372/fall03/linuxwords.txt")
+	every put(L5, !infile)
+
+# lowercase the word and put it into a list
+	length := *word
+	w := map(word)
+	L1 := []
+	every put(L1, !w)
+	L1 := sort(L1)
+# got everything set up now compare
+	write(word)
+	every dword := !L5 do compare(dword, L1)
+	write()
+end
+
+procedure compare(dword, L1) 
+	len := *dword
+	dw := map(dword)
+	L9 := []
+	every put(L9, !dw)
+	L9 := sort(L9)
+	every i := 1 to len do
+		if (L9[i] == L1[i]) then {} else fail
+	if (len == *L1) then write(dword)	
+end
+
+procedure main()
+	L := []
+	while put(L, read())
+	every word := !L do write(anagram(word))
+end

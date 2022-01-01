@@ -1,0 +1,62 @@
+link split
+
+# this program will do a depth first search and a breadth
+# first search on a graph
+# written by Dominic Martinez
+procedure main()
+	t := table()
+	dexplore := table()
+	bexplore := table() 
+	dud := read()
+	start := read()
+	bsline := read()
+	vertices := split(bsline, " \t")
+	every v := !vertices do { 
+		t[v] := []
+		dexplore[v] := 0
+		bexplore[v] := 0
+	}
+	while line := read() do {
+		edges := split(line, " \t")
+		if (dud == "directed") then
+			push(t[edges[1]], edges[2]) 	
+		else {
+			push(t[edges[1]], edges[2])
+			push(t[edges[2]], edges[1])
+		}
+	}
+
+	writes("from ", start, ":" )
+        Exploration := []
+	push(Exploration, start)
+        len := *Exploration
+        while len > 0 do {
+                visited := pop(Exploration)
+                if (dexplore[visited] == 0) then {
+                        writes(" ", visited)
+                        dexplore[visited] := 1
+			List := t[visited]
+			List := sort(List)
+                        every blah := !List do push(Exploration, blah)
+                }
+                len := *Exploration
+        }
+	write()
+
+        writes("from ", start, ":" )
+        Exploration2 := []
+        push(Exploration2, start)
+        len2 := *Exploration2
+        while len2 > 0 do {
+                visited2 := pull(Exploration2)
+                if (bexplore[visited2] == 0) then {
+                        writes(" ", visited2)
+                        bexplore[visited2] := 1
+                        List2 := t[visited2]
+                        List2 := sort(List2)
+                        every blah2 := !List2 do push(Exploration2, blah2)
+                }
+                len2 := *Exploration2
+        }
+	write()
+end

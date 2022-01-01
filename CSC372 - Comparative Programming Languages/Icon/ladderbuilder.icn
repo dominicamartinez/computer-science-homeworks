@@ -1,0 +1,27 @@
+procedure main()
+        L := []
+        while put(L, map(read()))
+	every word := !L do build(word, L)
+end
+
+procedure build(word, L)
+	size := *word
+	writes(word, ":")
+	t := table()
+	i := 0
+	every lett := !word do t[lett] := 0
+	every w := !L do {
+		if (size == *w) then {
+			every le := !w do t[le] := 1
+			every b := !word do {
+				if (t[b] == 0) then {
+					i := i + 1
+				}
+			}
+			if (i == 1) then { writes(w, ":") }
+		}
+		i := 0
+		every lee := !word do t[lee] := 0
+	}
+	write()
+end
